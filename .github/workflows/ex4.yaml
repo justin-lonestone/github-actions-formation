@@ -4,6 +4,6 @@ on:
 
 jobs:
   run-npm-test:
-    uses: ${{github.repository}}/.github/workflows/reusable-workflow.yaml@main
+    uses: ./.github/workflows/reusable-workflow.yaml@main
     with:
       node_version: 16
