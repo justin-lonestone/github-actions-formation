@@ -4,13 +4,15 @@ on:
 
 jobs:
   create-issue:
+    permissions:
+      issues: write
     runs-on: ubuntu-latest
     steps:
       - name: checkout
         uses: actions/checkout@v3
 
       - name: short_sha
-        run: echo 'sha_short=${GITHUB_SHA::7}' >> $GITHUB_OUTPUT
+        run: echo 'sha_short=test' >> $GITHUB_OUTPUT
 
       - name: create-issue
         run: |
